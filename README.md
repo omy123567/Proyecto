@@ -1,66 +1,80 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+# Presentación del Proyecto: Sistema de Gestión Web para Comercio
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+>![NOTE] 1. Descripción General del Proyecto
 
-## About Laravel
+El proyecto consiste en el desarrollo de un sistema de gestión web para comercios, diseñado para optimizar el control de ventas, compras de insumos, inventario, gastos, pagos, deudas de clientes, créditos, proveedores, y pedidos, entre otros aspectos. El sistema será desarrollado en PHP y tendrá una interfaz amigable y accesible desde cualquier dispositivo con conexión a Internet. La plataforma facilitará la toma de decisiones, centralizando toda la información en un solo lugar y permitiendo su análisis en tiempo real.
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+>![NOTE] 2. Objetivos Generales
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+Desarrollar un sistema de gestión web que permita a los comercios administrar sus operaciones diarias de manera centralizada, eficiente y accesible. La plataforma busca optimizar el control de las ventas, finanzas, inventario y relaciones con clientes y proveedores, reduciendo errores y facilitando la toma de decisiones estratégicas para el negocio.
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+>![NOTE] 3. Objetivos Específicos
 
-## Learning Laravel
+- Implementar un sistema de registro de ventas que permita controlar en tiempo real el flujo de ingresos del comercio.  
+- Crear un módulo para gestionar compras de insumos y productos, mejorando el control de gastos y la planificación de inventario.
+- Desarrollar funcionalidades de control de stock para reducir pérdidas por productos agotados o exceso de inventario.
+- Permitir el registro y análisis de gastos generales, facilitando la gestión financiera y la identificación de oportunidades de ahorro.
+- Incluir opciones de modalidades de pago que permitan flexibilidad al cliente y un registro claro de las transacciones.
+- Implementar un módulo de control de deudas de clientes y créditos personales para mejorar la gestión del flujo de caja.
+- Crear una base de datos de proveedores y un sistema de seguimiento de pedidos, mejorando la relación con proveedores y la planificación de compras.
+- Incluir un sistema de registro de usuarios con diferentes niveles de acceso para asegurar la privacidad y la seguridad de la información.
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+>![NOTE] 4. Límites
 
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
+- El sistema solo será accesible desde dispositivos con conexión a Internet, lo que lo hace dependiente de la conectividad.
+- La plataforma estará diseñada para comercios pequeños y medianos; para empresas de mayor escala, podrían requerirse módulos o ajustes adicionales.
+- Las funcionalidades están diseñadas para una estructura de comercio general y pueden requerir personalización adicional para ciertos sectores específicos.
+- El sistema no incluye la contabilidad completa del comercio, solo se enfoca en la gestión de operaciones e inventario.
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+>![NOTE] 5. Alcances
 
-## Laravel Sponsors
+- El sistema permitirá la gestión de inventario, ventas, compras, clientes, y proveedores, centralizando la información y facilitando la administración.
+- Permitirá llevar un registro de todas las transacciones y generar reportes sobre ventas, gastos e inventarios en tiempo real.
+- Será capaz de registrar la información de clientes y sus deudas, además de ofrecer opciones para gestionar pagos y créditos.
+- Contará con un sistema de permisos que gestionará los accesos de los usuarios, brindando niveles de seguridad según el rol de cada uno.
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the [Laravel Partners program](https://partners.laravel.com).
+>![NOTE] 6. Requerimientos Funcionales
 
-### Premium Partners
+- Registro de ventas: El sistema debe permitir registrar cada venta realizada, generando recibos e informes de ventas.
+- Gestión de compras: Debe registrar todas las compras realizadas a proveedores, actualizando el inventario automáticamente.
+- Control de stock: Actualización en tiempo real de las existencias de productos e insumos.
+- Control de gastos: El sistema debe permitir el registro y categorización de gastos.
+- Gestión de deudas de clientes y créditos personales: Debe registrar deudas de clientes y permitir la visualización del historial de pagos.
+- Control de proveedores: Registro y seguimiento de proveedores, historial de compras, y eficiencia de cada proveedor.
+- Registro de usuarios y permisos: Posibilidad de crear usuarios con diferentes permisos y niveles de acceso.
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[WebReinvent](https://webreinvent.com/)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[DevSquad](https://devsquad.com/hire-laravel-developers)**
-- **[Jump24](https://jump24.co.uk)**
-- **[Redberry](https://redberry.international/laravel/)**
-- **[Active Logic](https://activelogic.com)**
-- **[byte5](https://byte5.de)**
-- **[OP.GG](https://op.gg)**
+>![NOTE] 7. Requerimientos No Funcionales
 
-## Contributing
+- Seguridad: El sistema debe garantizar la protección de los datos de los usuarios y las transacciones mediante cifrado y autenticación de usuarios.
+- Accesibilidad: El sistema debe ser accesible desde cualquier navegador y dispositivo con conexión a Internet, asegurando compatibilidad en distintos entornos.
+- Usabilidad: La interfaz debe ser intuitiva, fácil de navegar y con un diseño atractivo que permita una curva de aprendizaje rápida.
+- Escalabilidad: El sistema debe estar diseñado de manera que permita añadir nuevas funcionalidades o ampliaciones sin requerir cambios drásticos en la estructura base.
+- Mantenimiento: El sistema debe ser fácil de mantener y actualizar, asegurando que las nuevas versiones o ajustes puedan integrarse sin complicaciones.
+- Disponibilidad: Al ser un sistema web, debe tener un alto nivel de disponibilidad, garantizando que los usuarios puedan acceder al sistema en cualquier momento.
+- Rendimiento: El sistema debe ser capaz de manejar de manera eficiente las transacciones y consultas, respondiendo en tiempo adecuado y sin ralentización.
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+## Como correr el proyecto en tu máquina un servidor de pruebas
 
-## Code of Conduct
+- El sistema utiliza una base de datos SQLite en su versión 3 para mayor versatilidad. Es menester mencionar que el sistema está desarrollado con el framework Laravel en su versión 11, por lo que es necesario [instalar composer](https://getcomposer.org/download/) para luego poder instalar las dependencias del proyecto.
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+1. Clonar este repositorio dentro de una carpeta que crearás para el sistema.
 
-## Security Vulnerabilities
+    ```bash
+    git clone https://github.com/omy123567/Proyecto.git
+    ```
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+2. Instalar las dependencias del proyecto
 
-## License
+    ```bash
+    # Ejecutar dentro de la carpeta generada, "Proyecto"
+    composer install
+    ```
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+3. Ejecutar el comando para servir el proyecto en una url temporal y de desarrollo
+
+    ```bash
+    # esto generará una url de desarrollo para acceso al sistema en http://127.0.0.1:8000/
+    php artisan serve 
+    ```
+
+4. Ingresar a la [url](http://127.0.0.1:8000/) para probar
