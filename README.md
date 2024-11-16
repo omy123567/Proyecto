@@ -2,7 +2,7 @@
 
 1. Descripción General del Proyecto
 
-    El proyecto consiste en el desarrollo de un sistema de gestión web para comercios, diseñado para optimizar el control de ventas, compras de insumos, inventario, gastos, pagos, deudas de clientes, créditos, proveedores, y pedidos, entre otros aspectos. El sistema será desarrollado en PHP y tendrá una interfaz amigable y accesible desde cualquier dispositivo con conexión a Internet. La plataforma facilitará la toma de decisiones, centralizando toda la información en un solo lugar y permitiendo su análisis en tiempo real.
+    El proyecto consiste en el desarrollo de un sistema de gestión web para comercios, diseñado para optimizar el control de ventas, compras de insumos, inventario, clientes y proveedores. El sistema será desarrollado en PHP y tendrá una interfaz amigable y accesible desde cualquier dispositivo con conexión a Internet. La plataforma facilitará la toma de decisiones, centralizando toda la información en un solo lugar y permitiendo su análisis en tiempo real.
 
 2. Objetivos Generales
 
@@ -15,8 +15,7 @@
     - Desarrollar funcionalidades de control de stock para reducir pérdidas por productos agotados o exceso de inventario.
     - Permitir el registro y análisis de gastos generales, facilitando la gestión financiera y la identificación de oportunidades de ahorro.
     - Incluir opciones de modalidades de pago que permitan flexibilidad al cliente y un registro claro de las transacciones.
-    - Implementar un módulo de control de deudas de clientes y créditos personales para mejorar la gestión del flujo de caja.
-    - Crear una base de datos de proveedores y un sistema de seguimiento de pedidos, mejorando la relación con proveedores y la planificación de compras.
+    - Crear una base de datos de proveedores, mejorando la relación con proveedores y la planificación de compras.
     - Incluir un sistema de registro de usuarios con diferentes niveles de acceso para asegurar la privacidad y la seguridad de la información.
 
 4. Límites
@@ -39,7 +38,6 @@
     - Gestión de compras: Debe registrar todas las compras realizadas a proveedores, actualizando el inventario automáticamente.
     - Control de stock: Actualización en tiempo real de las existencias de productos e insumos.
     - Control de gastos: El sistema debe permitir el registro y categorización de gastos.
-    - Gestión de deudas de clientes y créditos personales: Debe registrar deudas de clientes y permitir la visualización del historial de pagos.
     - Control de proveedores: Registro y seguimiento de proveedores, historial de compras, y eficiencia de cada proveedor.
     - Registro de usuarios y permisos: Posibilidad de crear usuarios con diferentes permisos y niveles de acceso.
 
