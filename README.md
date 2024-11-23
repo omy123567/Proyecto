@@ -50,6 +50,19 @@
     - Mantenimiento: El sistema debe ser fácil de mantener y actualizar, asegurando que las nuevas versiones o ajustes puedan integrarse sin complicaciones.
     - Disponibilidad: Al ser un sistema web, debe tener un alto nivel de disponibilidad, garantizando que los usuarios puedan acceder al sistema en cualquier momento.
     - Rendimiento: El sistema debe ser capaz de manejar de manera eficiente las transacciones y consultas, respondiendo en tiempo adecuado y sin ralentización.
+    
+## Información técnica
+
+* Entidades con las que contará la aplicación, de los cuales darán lugar a los módulos que tendrá la aplicación.
+
+    - Usuarios
+    - Proveedores
+    - Categorías de productos
+    - Productos
+    - Medios de pago
+    - Compras (de insumos)
+    - Ventas
+
 
 ## Como correr el proyecto en tu máquina un servidor de pruebas
 
