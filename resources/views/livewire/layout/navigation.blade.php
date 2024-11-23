@@ -34,6 +34,36 @@ new class extends Component
                         {{ __('Dashboard') }}
                     </x-nav-link>
                 </div>
+                <div class="hidden space-x-8 sm:-my-px sm:ms-10 sm:flex">
+                    <x-nav-link :href="route('sales.index')" :active="request()->routeIs('sales.index')" wire:navigate>
+                        {{ __('Vender Productos') }}
+                    </x-nav-link>
+                </div>
+                <div class="hidden space-x-8 sm:-my-px sm:ms-10 sm:flex">
+                    <x-nav-link :href="route('products.index')" :active="request()->routeIs('products.index')" wire:navigate>
+                        {{ __('Productos') }}
+                    </x-nav-link>
+                </div>
+                <div class="hidden space-x-8 sm:-my-px sm:ms-10 sm:flex">
+                    <x-nav-link :href="route('payment-methods.index')" :active="request()->routeIs('payment-methods.index')" wire:navigate>
+                        {{ __('Métodos de pago') }}
+                    </x-nav-link>
+                </div>
+                <div class="hidden space-x-8 sm:-my-px sm:ms-10 sm:flex">
+                    <x-nav-link :href="route('product-categories.index')" :active="request()->routeIs('product-categories.index')" wire:navigate>
+                        {{ __('Categorías') }}
+                    </x-nav-link>
+                </div>
+                <div class="hidden space-x-8 sm:-my-px sm:ms-10 sm:flex">
+                    <x-nav-link :href="route('purchases.index')" :active="request()->routeIs('purchases.index')" wire:navigate>
+                        {{ __('Comprar Insumos') }}
+                    </x-nav-link>
+                </div>
+                <div class="hidden space-x-8 sm:-my-px sm:ms-10 sm:flex">
+                    <x-nav-link :href="route('suppliers.index')" :active="request()->routeIs('suppliers.index')" wire:navigate>
+                        {{ __('Proveedores') }}
+                    </x-nav-link>
+                </div>
             </div>
 
             <!-- Settings Dropdown -->
