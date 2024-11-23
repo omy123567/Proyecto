@@ -67,7 +67,7 @@
 ## Como correr el proyecto en tu máquina un servidor de pruebas
 
 > [!NOTE]
-> El sistema utiliza una base de datos SQLite en su versión 3 para mayor versatilidad. Es menester mencionar que el sistema está desarrollado con el framework Laravel en su versión 11, por lo que es necesario [instalar composer](https://getcomposer.org/download/) para luego poder instalar las dependencias del proyecto.
+> El sistema utiliza una base de datos SQLite en su versión 3 para mayor versatilidad. Es menester mencionar que el sistema está desarrollado con el framework Laravel en su versión 11, por lo que es necesario [instalar composer](https://getcomposer.org/download/) para luego poder instalar las dependencias del proyecto. Asimismo es necesario instalar un entorno de desarrollo como  [Laragon](https://laragon.org/download/) o [XAMPP](https://www.apachefriends.org/es/index.html) para que se instale PHP como dependencia del sistema.
 
 1. Clonar este repositorio dentro de una carpeta que crearás para el sistema.
 
