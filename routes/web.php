@@ -20,7 +20,7 @@ Route::group(['middleware' => ['auth', 'admin']], function () {
     Route::resource('payment-methods', App\Http\Controllers\PaymentMethodController::class);
     Route::resource('product-categories', App\Http\Controllers\ProductCategoryController::class);
     Route::resource('purchases', App\Http\Controllers\PurchaseController::class);
-    Route::resource('suppliers', App\Http\Controllers\SupplierController::class);
+    Route::get('/suppliers', App\Livewire\Pages\Suppliers\Index::class)->name('suppliers.index');
 });
 
 require __DIR__ . '/auth.php';
