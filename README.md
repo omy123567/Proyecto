@@ -66,7 +66,7 @@
 ## Como correr el proyecto en tu máquina un servidor de pruebas
 
 > [!NOTE]
-> El sistema utiliza una base de datos SQLite en su versión 3 para mayor versatilidad. Es menester mencionar que el sistema está desarrollado con el framework Laravel en su versión 11, por lo que es necesario [instalar composer](https://getcomposer.org/download/) para luego poder instalar las dependencias del proyecto,además, importante mencionar que tenes que instalar [nodejs](https://nodejs.org/en/) para instalar las dependencias de node. Asimismo es necesario instalar un entorno de desarrollo como  [Laragon](https://laragon.org/download/) o [XAMPP](https://www.apachefriends.org/es/index.html) para que se instale PHP como dependencia del sistema.
+> El sistema utiliza una base de datos SQLite en su versión 3 para mayor versatilidad. Es menester mencionar que el sistema está desarrollado con el framework Laravel en su versión 11, por lo que es necesario [instalar composer](https://getcomposer.org/download/) para luego poder instalar las dependencias del proyecto, además, tenes que instalar [nodejs](https://nodejs.org/en/) para instalar las dependencias de node. Asimismo es necesario instalar un entorno de desarrollo como  [Laragon](https://laragon.org/download/) o [XAMPP](https://www.apachefriends.org/es/index.html) para que se instale PHP como dependencia del sistema.
 
 1. Clonar este repositorio dentro de una carpeta que crearás para el sistema.
 
@@ -77,13 +77,26 @@
 2. Instalar las dependencias del proyecto
 
     ```bash
-    # Ejecutar dentro de la carpeta generada, "Proyecto"
-    composer install
-    # También ejecutar este comando para instalar las dependencias de node
-    npm install
+    php artisan key:generate
     ```
 
-3. Ejecutar el comando para servir el proyecto en una url temporal y de desarrollo
+3. Realizar una copia del archivo `.env.example` y renombrarlo a `.env`, es el archivo que almacena las variables de entorno, necesarias para la correcta ejecución del sistema.
+
+4. Ejecutar siguiente comando para generar la llave única de encriptación:
+
+    ```bash
+    php artisan key:generate
+    ```
+
+5. Crear un archivo con el nombre `database.sqlite` en la raíz de la carpeta `database` del proyecto.
+
+6. Ejecutar el siguiente comando para ejecutar las migraciones (creación de tablas en base de datos) y la carga de datos por defecto
+
+    ```bash
+    php artisan migrate:fresh --seed
+    ```
+
+7. Ejecutar el comando para servir el proyecto en una url temporal y de desarrollo
 
     ```bash
     # esto generará una url de desarrollo para acceso al sistema en http://127.0.0.1:8000/
@@ -92,4 +105,4 @@
     npm run dev
     ```
 
-4. Ingresar a la [url](http://127.0.0.1:8000/) para probar
+8. Ingresar a la [url](http://127.0.0.1:8000/) para probar
