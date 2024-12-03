@@ -50,24 +50,23 @@
     - Mantenimiento: El sistema debe ser fácil de mantener y actualizar, asegurando que las nuevas versiones o ajustes puedan integrarse sin complicaciones.
     - Disponibilidad: Al ser un sistema web, debe tener un alto nivel de disponibilidad, garantizando que los usuarios puedan acceder al sistema en cualquier momento.
     - Rendimiento: El sistema debe ser capaz de manejar de manera eficiente las transacciones y consultas, respondiendo en tiempo adecuado y sin ralentización.
-    
+
 ## Información técnica
 
-* Entidades con las que contará la aplicación, de los cuales darán lugar a los módulos que tendrá la aplicación.
+- Entidades con las que contará la aplicación, de los cuales darán lugar a los módulos que tendrá la aplicación.
 
-    - Usuarios
-    - Proveedores
-    - Categorías de productos
-    - Productos
-    - Medios de pago
-    - Compras (de insumos)
-    - Ventas
-
+  - Usuarios
+  - Proveedores
+  - Categorías de productos
+  - Productos
+  - Medios de pago
+  - Compras (de insumos)
+  - Ventas
 
 ## Como correr el proyecto en tu máquina un servidor de pruebas
 
 > [!NOTE]
-> El sistema utiliza una base de datos SQLite en su versión 3 para mayor versatilidad. Es menester mencionar que el sistema está desarrollado con el framework Laravel en su versión 11, por lo que es necesario [instalar composer](https://getcomposer.org/download/) para luego poder instalar las dependencias del proyecto. Asimismo es necesario instalar un entorno de desarrollo como  [Laragon](https://laragon.org/download/) o [XAMPP](https://www.apachefriends.org/es/index.html) para que se instale PHP como dependencia del sistema.
+> El sistema utiliza una base de datos SQLite en su versión 3 para mayor versatilidad. Es menester mencionar que el sistema está desarrollado con el framework Laravel en su versión 11, por lo que es necesario [instalar composer](https://getcomposer.org/download/) para luego poder instalar las dependencias del proyecto,además, importante mencionar que tenes que instalar [nodejs](https://nodejs.org/en/) para instalar las dependencias de node. Asimismo es necesario instalar un entorno de desarrollo como  [Laragon](https://laragon.org/download/) o [XAMPP](https://www.apachefriends.org/es/index.html) para que se instale PHP como dependencia del sistema.
 
 1. Clonar este repositorio dentro de una carpeta que crearás para el sistema.
 
@@ -80,6 +79,8 @@
     ```bash
     # Ejecutar dentro de la carpeta generada, "Proyecto"
     composer install
+    # También ejecutar este comando para instalar las dependencias de node
+    npm install
     ```
 
 3. Ejecutar el comando para servir el proyecto en una url temporal y de desarrollo
@@ -87,6 +88,8 @@
     ```bash
     # esto generará una url de desarrollo para acceso al sistema en http://127.0.0.1:8000/
     php artisan serve 
+    # y en otra terminal ejecutar el siguiente comando para ejecutar el entorno de nodejs
+    npm run dev
     ```
 
 4. Ingresar a la [url](http://127.0.0.1:8000/) para probar
