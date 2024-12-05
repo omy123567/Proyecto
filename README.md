@@ -82,10 +82,12 @@
 
 3. Realizar una copia del archivo `.env.example` y renombrarlo a `.env`, es el archivo que almacena las variables de entorno, necesarias para la correcta ejecución del sistema.
 
-4. Ejecutar siguiente comando para generar la llave única de encriptación:
+4. Ejecutar siguiente comando para generar la llave única de encriptación y link simbólico para imágenes de producto:
 
     ```bash
     php artisan key:generate
+
+    php artisan storage:link
     ```
 
 5. Crear un archivo con el nombre `database.sqlite` en la raíz de la carpeta `database` del proyecto.
