@@ -12,7 +12,9 @@ Route::group(['middleware' => ['auth']], function () {
 
     Route::view('profile', 'profile')
         ->name('profile');
-    Route::resource('sales', App\Http\Controllers\SaleController::class)->except(['update', 'destroy']);
+    Route::get('/sales', App\Livewire\Pages\Sales\Index::class)->name('sales.index');
+    Route::get('/sales/create', App\Livewire\Pages\Sales\Create::class)->name('sales.create');
+
 });
 
 Route::group(['middleware' => ['auth', 'admin']], function () {
