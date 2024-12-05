@@ -17,8 +17,8 @@ Route::group(['middleware' => ['auth']], function () {
 
 Route::group(['middleware' => ['auth', 'admin']], function () {
     Route::resource('products', App\Http\Controllers\ProductController::class);
-    Route::resource('product-categories', App\Http\Controllers\ProductCategoryController::class);
     Route::resource('purchases', App\Http\Controllers\PurchaseController::class);
+    Route::get('/product-categories', App\Livewire\Pages\Categories\Index::class)->name('product-categories.index');
     Route::get('/payment-methods', App\Livewire\Pages\PaymentMethods\Index::class)->name('payment-methods.index');
     Route::get('/suppliers', App\Livewire\Pages\Suppliers\Index::class)->name('suppliers.index');
 });
