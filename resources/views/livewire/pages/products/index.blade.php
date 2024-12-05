@@ -11,7 +11,8 @@
             <tr>
                 <th scope="col" class="p-4">Imagen</th>
                 <th scope="col" class="p-4">Nombre</th>
-                <th scope="col" class="p-4">Proveedor</th>
+                <th scope="col" class="p-4">Stock</th>
+                <th scope="col" class="p-4">Stock Mínimo</th>
                 <th scope="col" class="p-4">Descripción</th>
                 <th scope="col" class="p-4">Acciones</th>
             </tr>
@@ -31,11 +32,12 @@
                             <div class="flex flex-col">
                                 <span class="text-neutral-900 dark:text-white">{{ $product->name }}</span>
                                 <span
-                                    class="text-sm text-neutral-600 opacity-85 dark:text-neutral-300">${{ $product->stock }}</span>
+                                    class="text-sm text-neutral-600 opacity-85 dark:text-neutral-300">${{ $product->price }}</span>
                             </div>
                         </div>
                     </td>
-                    <td class="p-4">{{ $product->supplier->name }}</td>
+                    <td class="p-4">{{ $product->stock }}</td>
+                    <td class="p-4">{{ $product->min_stock }}</td>
                     <td class="p-4">{{ $product->description }}</td>
                     <td class="p-4">
                         <x-secondary-button

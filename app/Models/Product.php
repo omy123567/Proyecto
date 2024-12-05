@@ -20,7 +20,6 @@ class Product extends Model
         'price',
         'stock',
         'product_category_id',
-        'supplier_id',
         'min_stock',
         'image',
     ];
@@ -37,11 +36,6 @@ class Product extends Model
     public function category()
     {
         return $this->belongsTo(ProductCategory::class, 'product_category_id');
-    }
-
-    public function supplier()
-    {
-        return $this->belongsTo(Supplier::class);
     }
 
     public function sales()

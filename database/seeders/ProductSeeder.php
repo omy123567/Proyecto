@@ -17,7 +17,6 @@ class ProductSeeder extends Seeder
     {
 
         $productCategories = ProductCategory::all();
-        $suppliers = Supplier::all();
 
         $products = [
             [
@@ -26,7 +25,6 @@ class ProductSeeder extends Seeder
                  'price' => 100,
                  'stock' => 10,
                  'product_category_id' => $productCategories->random()->id,
-                 'supplier_id' => $suppliers->random()->id,
                  'min_stock' => 5,
             ],
             [
@@ -35,7 +33,6 @@ class ProductSeeder extends Seeder
                 'price' => 200,
                 'stock' => 20,
                 'product_category_id' => $productCategories->random()->id,
-                'supplier_id' => $suppliers->random()->id,
                 'min_stock' => 10,
             ],
             [
@@ -44,7 +41,6 @@ class ProductSeeder extends Seeder
                 'price' => 300,
                 'stock' => 30,
                 'product_category_id' => $productCategories->random()->id,
-                'supplier_id' => $suppliers->random()->id,
                 'min_stock' => 15,
             ],
             [
@@ -53,7 +49,6 @@ class ProductSeeder extends Seeder
                 'price' => 400,
                 'stock' => 40,
                 'product_category_id' => $productCategories->random()->id,
-                'supplier_id' => $suppliers->random()->id,
                 'min_stock' => 20,
             ],
             [
@@ -62,7 +57,6 @@ class ProductSeeder extends Seeder
                 'price' => 500,
                 'stock' => 50,
                 'product_category_id' => $productCategories->random()->id,
-                'supplier_id' => $suppliers->random()->id,
                 'min_stock' => 25,
             ],
             

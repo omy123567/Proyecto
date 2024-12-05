@@ -17,7 +17,6 @@ return new class extends Migration
             $table->text('description')->nullable();
             $table->decimal('price', 10, 2);
             $table->foreignUuid('product_category_id')->constrained('product_categories');
-            $table->foreignUuid('supplier_id')->constrained('suppliers');
             $table->integer('stock')->default(0);
             $table->integer('min_stock')->default(0);
             $table->string('image')->nullable();

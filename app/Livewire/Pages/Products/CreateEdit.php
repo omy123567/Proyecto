@@ -41,9 +41,6 @@ class CreateEdit extends Component
     #[Validate('required|string', as: 'categoría')]
     public $product_category_id = "";
 
-    #[Validate('required|string', as: 'proveedor')]
-    public $supplier_id = "";
-
     #[Validate('nullable|image|max:10240')]
     public $image;
 
@@ -71,7 +68,6 @@ class CreateEdit extends Component
             $this->price = $product->price;
             $this->stock = $product->stock;
             $this->product_category_id = $product->product_category_id;
-            $this->supplier_id = $product->supplier_id;
             $this->min_stock = $product->min_stock;
             if ($product->image) {
                 $this->image = Storage::url($product->image);
@@ -92,7 +88,6 @@ class CreateEdit extends Component
                 'stock',
                 'min_stock',
                 'product_category_id',
-                'supplier_id',
                 'image'
             );
         }

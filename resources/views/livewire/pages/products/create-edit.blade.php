@@ -77,15 +77,7 @@
 
                                 <x-input-error :messages="$errors->get('product_category_id')" class="mt-2" />
                             </div>
-                            <div class="">
-                                <x-input-label for="supplier_id" value="Proveedor" />
-
-                                <x-select wire:model="supplier_id" id="supplier_id" name="supplier_id" :options="$suppliers"
-                                    class="mt-1 w-full">
-                                </x-select>
-
-                                <x-input-error :messages="$errors->get('supplier_id')" class="mt-2" />
-                            </div>
+                          
                             <div>
                                 <x-input-label for="image" value="Imagen" />
 
