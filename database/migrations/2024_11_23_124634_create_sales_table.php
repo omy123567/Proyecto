@@ -16,6 +16,7 @@ return new class extends Migration
             $table->dateTime('datetime_sale');
             $table->foreignUuid('payment_method_id')->constrained();
             $table->string('customer_name')->default('Consumidor final');
+            $table->decimal('total', 10, 2);
             $table->timestamps();
             $table->softDeletes();
         });
