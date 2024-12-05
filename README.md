@@ -77,7 +77,10 @@
 2. Instalar las dependencias del proyecto
 
     ```bash
-    php artisan key:generate
+    #primero 
+    composer install
+    #luego
+    npm i
     ```
 
 3. Realizar una copia del archivo `.env.example` y renombrarlo a `.env`, es el archivo que almacena las variables de entorno, necesarias para la correcta ejecución del sistema.
