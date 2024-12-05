@@ -31,11 +31,20 @@
                     <td class="p-4">{{ $supplier->phone }}</td>
                     <td class="p-4">{{ $supplier->address }}</td>
                     <td class="p-4">
-                        <x-secondary-button>Editar</x-secondary-button>
-                        <x-primary-button>Ver</x-primary-button>
+                        <x-secondary-button
+                            wire:click="$dispatchTo('pages.suppliers.create-edit','open-modal', { supplierId: '{{ $supplier->id }}' })">Editar</x-secondary-button>
                     </td>
                 </tr>
             @empty
+                <tr>
+                    <td class="p-4" colspan="4">
+                        <div class="flex items
+                        -center justify-center">
+                            <span class="text-sm text-neutral-500 dark:text-neutral-400">No se encontraron
+                                proveedores</span>
+                        </div>
+                    </td>
+                </tr>
             @endforelse
         </tbody>
     </table>

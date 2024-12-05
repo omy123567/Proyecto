@@ -3,6 +3,8 @@
 namespace App\Livewire\Pages\Suppliers;
 
 use App\Models\Supplier;
+use Illuminate\Support\Facades\Log;
+use Livewire\Attributes\On;
 use Livewire\Attributes\Validate;
 use Livewire\Component;
 
@@ -11,7 +13,7 @@ class CreateEdit extends Component
 
     public $openModal = false;
 
-    #[Validate('required', onUpdate: false)]
+    #[Validate('nullable', onUpdate: 'required')]
     public $supplierId;
 
 
@@ -30,17 +32,47 @@ class CreateEdit extends Component
     #[Validate('nullable|min:3', as: 'observaciones')]
     public $observations = "";
 
+
+    #[On('open-modal')]
+    public function openModal(Supplier $supplierId)
+    {
+
+        if ($supplierId) {
+            $this->supplierId = $supplierId->id;
+            $this->name = $supplierId->name;
+            $this->email = $supplierId->email;
+            $this->phone = $supplierId->phone;
+            $this->address = $supplierId->address;
+            $this->observations = $supplierId->observations;
+        }
+
+        $this->openModal = true;
+    }
+
+
     public function save()
     {
         
         $validated = $this->validate();
-
-        $this->dispatch('notify', variant: 'success', message: 'Proveedor creado correctamente.');
-
-        Supplier::create($validated);
+        try {
+            if ($this->supplierId) {
+                Supplier::find($this->supplierId)->update($validated);
+            } else {
+                Supplier::create($validated);
+            }
+            
+            $this->dispatch('refresh');
+            $this->openModal = false;
+            $message = $this->supplierId ? 'Proveedor editado correctamente.' : `Proveedor creado correctamente.`;            
+            $this->dispatch('notify', variant: 'success', message: $message);
+            $this->reset();
+        } catch (\Throwable $th) {
+            Log::error($th);
+            $this->dispatch('notify', variant: 'danger', message: 'Error al crear el proveedor. Mira tus logs.');
+        }
     }
-
-
+    
+    
     public function render()
     {
         return view('livewire.pages.suppliers.create-edit');
