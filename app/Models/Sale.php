@@ -18,6 +18,7 @@ class Sale extends Model
         'datetime_sale',
         'payment_method_id',
         'customer_name',
+        'total'
     ];
 
     /**
@@ -29,6 +30,15 @@ class Sale extends Model
         'deleted_at',
     ];
 
+    /**
+     * The attributes that should be cast.
+     *
+     * @var array<int, string>
+     */
+    protected $casts = [
+        'datetime_sale' => 'datetime',
+    ];
+
     public function paymentMethod()
     {
         return $this->belongsTo(PaymentMethod::class);
@@ -38,7 +48,7 @@ class Sale extends Model
     {
         return $this->belongsToMany(Product::class)
             ->using(ProductSale::class)
-            ->withPivot('quantity', 'sale_price', 'total', 'discount', "subtotal")
+            ->withPivot('quantity', 'sale_price', 'discount', "subtotal")
             ->withTimestamps();
     }
 
