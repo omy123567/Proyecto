@@ -12,7 +12,6 @@
                 <th scope="col" class="p-4">Fecha</th>
                 <th scope="col" class="p-4">Productos</th>
                 <th scope="col" class="p-4">Proveedor</th>
-                <th scope="col" class="p-4">Acciones</th>
             </tr>
         </thead>
         <tbody class="divide-y divide-neutral-300 dark:divide-neutral-700">
@@ -22,7 +21,7 @@
                         <div class="flex w-max items-center gap-2">
 
                             <div class="flex flex-col">
-                                <span class="text-neutral-900 dark:text-white">{{ $purchase->purchase_date }}</span>
+                                <span class="text-neutral-900 dark:text-white">{{ $purchase->date_purchase->format('d-m-Y') }}</span>
 
                             </div>
                         </div>
@@ -34,10 +33,6 @@
                     </td>
                     <td class="p-4"> {{ $purchase->supplier->name }} </td>
                     
-                    <td class="p-4">
-                        <x-secondary-button
-                            wire:click="$dispatchTo('pages.purchases.create-edit','open-modal', { purchaseId: '{{ $purchase->id }}' })">Editar</x-secondary-button>
-                    </td>
                 </tr>
             @empty
                 <tr>
