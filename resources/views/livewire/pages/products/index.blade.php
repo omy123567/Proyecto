@@ -19,7 +19,7 @@
         </thead>
         <tbody class="divide-y divide-neutral-300 dark:divide-neutral-700">
             @forelse ($products as $product)
-                <tr wire:key='{{ $product->id }}'>
+                <tr wire:key='{{ $product->id }}' class="{{ $product->stock < $product->min_stock ? 'border border-red-600 bg-red-600 bg-opacity-10' : '' }}">
                     <td class="p-4">
                         @if ($product->image)
                         <img src="{{ Storage::url($product->image) }}" alt="{{ $product->name }}" class="w-12 h-12 object-cover">
