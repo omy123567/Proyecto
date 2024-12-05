@@ -29,6 +29,15 @@ class Purchase extends Model
         'deleted_at',
     ];
 
+    /**
+     * The attributes that should be cast.
+     *
+     * @var array<string, string>
+     */
+    protected $casts = [
+        'date_purchase' => 'datetime',
+    ];
+
     public function supplier()
     {
         return $this->belongsTo(Supplier::class);
