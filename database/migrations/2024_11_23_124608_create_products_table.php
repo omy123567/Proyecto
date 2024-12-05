@@ -18,8 +18,8 @@ return new class extends Migration
             $table->decimal('price', 10, 2);
             $table->foreignUuid('product_category_id')->constrained('product_categories');
             $table->foreignUuid('supplier_id')->constrained('suppliers');
-            $table->integer('stock');
-            $table->integer('min_stock');
+            $table->integer('stock')->default(0);
+            $table->integer('min_stock')->default(0);
             $table->string('image')->nullable();
             $table->timestamps();
             $table->softDeletes();
