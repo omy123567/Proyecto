@@ -2,7 +2,7 @@
     <table class="w-full text-left text-sm text-neutral-600 dark:text-neutral-300">
         <caption>
             <div class="flex justify-between items-center p-4">
-                <h1 class="text-lg font-semibold text-neutral-900 dark:text-white">Listado de proveedores</h1>
+                <h1 class="text-lg font-semibold text-neutral-900 dark:text-white">Listado de métodos de pago</h1>
                 <livewire:pages.payment-methods.create-edit />
             </div>
         </caption>
@@ -35,7 +35,7 @@
                         <div class="flex items
                         -center justify-center">
                             <span class="text-sm text-neutral-500 dark:text-neutral-400">No se encontraron
-                                proveedores</span>
+                                métodos de pago</span>
                         </div>
                     </td>
                 </tr>
