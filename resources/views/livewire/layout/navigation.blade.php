@@ -34,14 +34,14 @@ new class extends Component {
                     </x-nav-link>
                 </div>
                 <div class="hidden space-x-8 sm:-my-px sm:ms-10 sm:flex">
-                    <x-nav-link :href="route('sales.index')" :active="request()->routeIs('sales.index')" wire:navigate>
+                    <x-nav-link :href="route('sales.index')" :active="request()->routeIs('sales.*')" wire:navigate>
                         {{ __('Vender Productos') }}
                     </x-nav-link>
                 </div>
                 <!-- Administration -->
                 @if (auth()->user()->role === 'admin')
                     <div class="hidden space-x-8 sm:-my-px sm:ms-10 sm:flex">
-                        <x-nav-link :href="route('purchases.index')" :active="request()->routeIs('sales.index')" wire:navigate>
+                        <x-nav-link :href="route('purchases.index')" :active="request()->routeIs('purchases.index')" wire:navigate>
                             {{ __('Comprar Insumos') }}
                         </x-nav-link>
                     </div>
