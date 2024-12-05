@@ -1,5 +1,5 @@
 <div>
-    <div x-data="{ modalIsOpen: $wire.entangle('openModal') }">
+    <div x-data="{ modalIsOpen: $wire.entangle('openModal').live }">
         <x-primary-button x-on:click="modalIsOpen = true">Crear proveedor</x-primary-button>
 
         <div x-cloak x-show="modalIsOpen" x-transition.opacity.duration.200ms x-trap.inert.noscroll="modalIsOpen"
@@ -14,8 +14,13 @@
                 <!-- Dialog Header -->
                 <div
                     class="flex items-center justify-between border-b border-neutral-300 bg-neutral-50/60 p-4 dark:border-neutral-700 dark:bg-neutral-950/20">
-                    <h3 id="defaultModalTitle" class="font-semibold tracking-wide text-neutral-900 dark:text-white">
-                        Special Offer</h3>
+                    <div class="flex flex-col items-start">
+                        <h3 id="defaultModalTitle" class="font-semibold tracking-wide text-neutral-900 dark:text-white">
+                            {{ $supplierId ? 'Editar proveedor' : 'Crear proveedor' }}</h3>
+                        <p class="mt-1 text-sm text-gray-600 dark:text-gray-400  justify-self-start">
+                            {{ $supplierId ? 'Edita los datos del proveedor' : 'Ingresa los datos del proveedor' }}
+                        </p>
+                    </div>
                     <button @click="modalIsOpen = false" aria-label="close modal">
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true"
                             stroke="currentColor" fill="none" stroke-width="1.4" class="w-5 h-5">
@@ -26,14 +31,6 @@
                 <!-- Dialog Body -->
                 <div class="">
                     <form wire:submit="save" class="p-6">
-
-                        <h2 class="text-lg font-medium text-gray-900 dark:text-gray-100 justify-self-start">
-                            {{ $supplierId ? 'Editar proveedor' : 'Crear proveedor' }}
-                        </h2>
-
-                        <p class="mt-1 text-sm text-gray-600 dark:text-gray-400  justify-self-start">
-                            {{ $supplierId ? 'Edita los datos del proveedor' : 'Ingresa los datos del proveedor' }}
-                        </p>
 
                         <div class="w-full grid grid-cols-2 gap-2 m-2">
                             <div class="">

@@ -49,10 +49,17 @@ class CreateEdit extends Component
         $this->openModal = true;
     }
 
+    public function updatedOpenModal($value)
+    {
+        if (!$value) {
+            $this->reset();
+        }
+    }
+
 
     public function save()
     {
-        
+
         $validated = $this->validate();
         try {
             if ($this->supplierId) {
@@ -60,19 +67,19 @@ class CreateEdit extends Component
             } else {
                 Supplier::create($validated);
             }
-            
+
             $this->dispatch('refresh');
             $this->openModal = false;
-            $message = $this->supplierId ? 'Proveedor editado correctamente.' : `Proveedor creado correctamente.`;            
+            $message = $this->supplierId ? 'Proveedor editado correctamente.' : `Proveedor creado correctamente.`;
             $this->dispatch('notify', variant: 'success', message: $message);
             $this->reset();
         } catch (\Throwable $th) {
             Log::error($th);
-            $this->dispatch('notify', variant: 'danger', message: 'Error al crear el proveedor. Mira tus logs.');
+            $this->dispatch('notify', variant: 'danger', message: 'Error al crear el proveedor. Comunícate con el administrador del sistema.');
         }
     }
-    
-    
+
+
     public function render()
     {
         return view('livewire.pages.suppliers.create-edit');
