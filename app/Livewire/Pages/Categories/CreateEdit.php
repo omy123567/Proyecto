@@ -52,6 +52,7 @@ class CreateEdit extends Component
             $message = $this->categoryId ? 'Categoría editado correctamente.' : `Categoría creado correctamente.`;
             $this->dispatch('notify', variant: 'success', message: $message);
             $this->reset();
+            cache()->forget('product_categories');
         } catch (\Throwable $th) {
             Log::error($th->getMessage());
             $this->dispatch('notify', variant: 'danger', message: 'Error al crear Categoría. Comunícate con el administrador del sistema.');
